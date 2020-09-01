@@ -1,0 +1,36 @@
+<!-- Skip to content link -->
+<a href="#wmre-main-content" title="Skip to main content" target="_self" class="wmre-link wmre-header__skip-link" >Skip to main content</a>
+<!-- Main header section -->
+<header class="wmre-header">
+  <div class="wmre-container wmre-grid wmre-grid--align-center wmre-grid--justify-between">
+    <div class="wmre-header__vertical-align wmre-col-auto">
+      <!-- Logo -->
+      <a class="wmre-header__logo-link" href="https://wmcadigital.github.io/wmre-design-system/" title="West Midlands Rail Executive Design System">
+        <img class="wmre-header__logo" alt="West Midlands Rail Executive logo" src="https://wmcadigital.github.io/wmre-design-system/img/logo.svg" />
+      </a>
+      <!-- Phase indicator -->
+      <a href="https://wmcadigital.github.io/wmre-design-system/" target="_self" class="wmre-phase-indicator" title="Beta homepage of West Midlands Rail Executive Design System">
+        Beta
+      </a>
+    </div>
+    <!-- Nav items -->
+    <nav class="wmre-header__vertical-align wmre-col-auto">
+      <ul class="wmre-header__links wmre-header__main-links">
+        <li class="wmre-header__link">
+          <a href="https://wmcadigital.github.io/wmre-design-system/styles/" title="Styles page" target="_self" class="wmre-link" >
+            Styles
+          </a>
+        </li><li class="wmre-header__link">
+          <a href="https://wmcadigital.github.io/wmre-design-system/components/" title="Components page" target="_self" class="wmre-link" >
+            Components
+          </a>
+        </li><li class="wmre-header__link">
+          <a href="https://wmcadigital.github.io/wmre-design-system/patterns/" title="Patterns page" target="_self" class="wmre-link" >
+            Patterns
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>

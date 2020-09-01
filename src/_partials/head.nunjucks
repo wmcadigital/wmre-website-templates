@@ -1,0 +1,30 @@
+<head>
+  <meta charset="utf-8" />
+  <title>
+  {# If homepage #}
+  {% if section == "Home" %}
+    Home - West Midlands Rail Executive Design System
+  {% else %}
+  {# Else any other pages #}
+    {{ pageTitle | striptags}} - West Midlands Rail Executive Design System
+  {% endif %}
+  </title>
+  <meta name="description" content="Your one stop shop for travel in the West Midlands" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {# Favicons #}
+  <link rel="apple-touch-icon" sizes="180x180" href="https://wmcadigital.github.io/wmre-design-system/config/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wmcadigital.github.io/wmre-design-system/config/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wmcadigital.github.io/wmre-design-system/config/favicons/favicon-16x16.png">
+  <link rel="manifest" href="https://wmcadigital.github.io/wmre-design-system/config/favicons/site.webmanifest">
+  <link rel="mask-icon" href="https://wmcadigital.github.io/wmre-design-system/config/favicons/safari-pinned-tab.svg" color="#169586">
+  <link rel="shortcut icon" href="https://wmcadigital.github.io/wmre-design-system/config/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#169586">
+  <meta name="msapplication-config" content="https://wmcadigital.github.io/wmre-design-system/config/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#169586">
+
+  <!-- Website Styles -->
+  <link rel="stylesheet" href="https://wmcadigital.github.io/wmre-design-system/css/wmre-components.min.css" />
+  <link rel="stylesheet" href="{{baseUrl}}styles/main.css"/>
+  {% block stylesheets %}{% endblock %}
+</head>
