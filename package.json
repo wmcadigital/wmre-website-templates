@@ -1,0 +1,16 @@
+{
+  "name": "wmre",
+  "version": "1.0.0",
+  "description": "wmre",
+  "main": "server.js",
+  "dependencies": {
+    "node-html-parser": "^1.2.21"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Chris Egbuonu",
+  "license": "ISC"
+}
