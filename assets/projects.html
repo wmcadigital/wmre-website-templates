@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Projects - West Midlands Rail Executive</title>
+      <meta name="description" content="">
+      <meta name="author" content="">
+  </head>
+  <body>
+    <style>
+      body{margin:0;font-family: "Open Sans",sans-serif;height:100vh;color:#54565b;-webkit-font-smoothing:antialiased;font-size:16px;min-width:320px}
+      h1{font-size:48px}
+      h2{font-size: 32px;}
+      h3{font-size: 23px;}
+      input{font:inherit;margin:0;border: 0;padding: 0;outline: 0;}
+      select{font:inherit;padding: 0 10px;border:0;outline: 0;}
+      a{text-decoration: none;color: inherit;}
+
+      main{margin: 60px auto 0;padding: 0 20px 20px;min-height:800px;text-align: center;max-width: 1280px;overflow: auto;}
+
+      .hero{position: relative;}
+      .hero img{width: calc(100% + 20px);position: relative;left: -10px;max-height: 256px;object-fit: cover;}
+
+      .filter{box-shadow: 0 0 6px 0 #d3d3d3;width: 270px;background: white;position: absolute;left: calc((100% - 290px)/2);top: 60%;padding: 10px;max-width:545px}
+      .filter p{border-bottom: 2px solid #3cbfae;    position: absolute;right: 10px;top: 0;}
+      .filter select{width: 270px;border: 1px solid black;margin-top: 42px;height: 40px;background: url(media/project-grey-arrow.png) no-repeat 235px;appearance: none;}
+      .filter input{    width: 248px;border: 1px solid black;margin-top: 10px;height: 38px;padding: 0 10px;}
+      .switchfield{width:268px;border: 1px solid black;margin-top: 10px;height: 38px;font-size: 0;display: inline-block;}
+      .switchfield div{    display: inline-block;width: 100px;padding: 10px 17px;font-size: 16px;}
+      .switchfield .selected{background:#3cbfae; color:white}
+      
+      .projlist{margin-top: 210px;}
+      .proj{display: inline-block;width: 270px;background: white;text-align: left;    box-shadow: 0 2px 10px #d3d3d3;margin-bottom: 20px;}
+      .proj:last-child{margin-bottom: 0;}
+      .proj img{width:260px;margin: 5px;}
+      .proj h4{ color: black;margin: 3px 5px;}
+      .proj span{color: black;display: inline-block;margin: 5px;}
+      .proj span:first-of-type{border-right: 2px solid #3cbfae;padding-right: 5px;margin-right: 0;}
+      
+      @media(min-width: 545px){
+        .filter{left:calc((100% - 565px)/2);width:545px}
+        .projlist{margin-top:70px}
+
+      }
+      .load{    border-radius: 20px;margin-top: 30px;padding: 10px 20px;border: 2px solid #3cbfae;margin-bottom: 30px;}
+      .inv-strat{display: none;}
+
+      .card{   box-shadow: 0 2px 10px #d3d3d3;padding: 20px 20px 0;}
+      .card br{display: none;}
+      .card button{ border-radius: 20px;margin-top: 20px;padding: 10px 20px;border: 2px solid #3cbfae;}
+      .card img{    width: calc(100% + 40px);position: relative;left: -20px;margin-top: 20px;vertical-align: top;}
+
+      @media (min-width:585px) {
+        main > h2{text-align: left;}
+        .card{padding: 10px;text-align: left;max-width: 700px;margin: 0 auto;}
+        .card div{display: inline-block; width:calc(100% - 230px);margin-right: 25px;}
+        .card img{width:200px;margin-top: 0;vertical-align: top;}
+      }
+
+    </style>
+    <main>
+      <h2>Projects</h2>
+      <section class="hero">
+        <img src="media/projects-bg.png">
+        <div class="filter">
+          <p>Reset filters</p>
+          <select>
+            <option value="0" selected="" disabled="">Select your area</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <input placeholder="Enter postcode">
+          <div class="switchfield">
+            <div class="selected">In progress</div>
+            <div>Completed</div>
+          </div>
+          <select class="cat" style="margin-top: 10px;">
+            <option value="0" selected="" disabled="">Categories</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+      </section>
+      <div class="projlist">
+        <a class="proj" href="/">
+          <img src="rail-yellow.png" alt="rail-programme">
+          <h4>Project title</h4>
+          <span>WolverHampton</span><span>In progress</span>
+        </a>
+        <a class="proj" href="/">
+          <img src="rail-yellow.png" alt="rail-programme">
+          <h4>Project title</h4>
+          <span>WolverHampton</span><span>In progress</span>
+        </a>
+        <a class="proj" href="/">
+          <img src="rail-yellow.png" alt="rail-programme">
+          <h4>Project title</h4>
+          <span>WolverHampton</span><span>In progress</span>
+        </a>
+      </div>
+      <button class="load">Load more</button>
+      <div class="card">
+        <div>
+          <h2>Sign up for project alerts</h2>
+          <p>More projects to come, sign up for alerts and be the first to hear about the new projects in the area.</p>
+          <button>Sign up for alerts</button>
+        </div>
+        <img src="media/card-2-rail-programme.png" alt="rail">
+      </div>
+    </main>
+    <script src="scripts.js" show></script>   
+  </body>
+</html>

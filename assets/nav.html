@@ -1,0 +1,75 @@
+<style>
+  nav{display: block;text-align: left;padding: 10px 0;position:absolute;width:100%;top:0;background: #222;min-width: 320px;max-width: 1280px;}
+  nav[trans]{background: transparent;}
+  .logo{display: inline-block; width: 162px;height:50px;background: url(media/wmre-nav-logo.png) no-repeat center/cover;position: relative;z-index: 1;left: 5px;}
+  .links{float:right;font-size: 16px;}
+  .links a{color: white;text-decoration: none;margin:8px 16px;display: inline-block;position: relative;}
+  .links a[href="whatwedo"]{padding: 8px 16px;margin: 0;}
+  .links a[href="whatwedo"]:hover + div{display: block;}
+  .links > :last-child{background: url(media/search.png) no-repeat center/cover;height: 18px;border: 0;cursor: pointer;width: 16px;margin: 8px 16px;position: relative;top:3px}
+
+  .whatwedo{display: none;position: absolute;background: white;left:0;width:100%;text-align: center;top:47px;z-index: 1;}
+  .whatwedo:hover{display: block;}
+  .whatwedo > div{ width: 320px;display: inline-block;text-align: left;vertical-align: top;padding: 50px;}
+  .whatwedo > span{content:'';position: absolute;width: 0;height: 0;    border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 20px solid white;top:-12px;left:73.3%;}
+  .whatwedo a{display: inline-block;margin: 15px 0;border-bottom: 2px solid #3cbfae;color: black;}      
+
+  .menu{float:right;color: white;font-size: 25px;line-height: 25px;display: none;    position: relative;right: 5px;top:5px}
+  .menu-screen{position: absolute;width: 100vw;height: 100vh;background: black;display: none;top:0;font-size: 16px;}
+  .menu-screen a{color: white;text-decoration: none;margin: 20px auto;display: block;width: 100px;}
+  .menu-screen a:first-of-type{margin-top: 140px;}
+  .menu-close{z-index: 1;position: absolute;top:5px;right:5px;color: white;font-size: 50px;line-height: 20px;}
+
+  @media (min-width: 1280px){
+    nav {padding:10px calc((100% - 1280px)/2)}
+  } 
+
+  @media (max-width: 747px) {
+    .links{display: none}
+    .logo{width: 113px;height: 35px;}
+    .menu{display: block;} 
+  }
+    
+</style>
+<nav>
+  <a class="logo" href="/"></a>
+  <div class="links">
+    <a href="about" onclick="navigate(event,this)">About WMRE</a>
+    <a href="projects" onclick="navigate(event,this)">Projects</a>
+    <a href="whatwedo" onclick="navigate(event,this)">What we do</a>
+    <div class="whatwedo">
+      <div>
+        <h4>What we do</h4>
+        <p>
+          Short copy about the programmes that make up WMRE and what they are delivering. Lorem Ipsum is simply dummy
+          text of the printing and typesetting industry. Lorem ipsum has been the industry’s standard dummy text ever
+          since the 1500s,
+        </p>
+      </div>
+      <div>
+        <a href="/wm-rail-programme/wm-rail-programme.html">West Midlands Rail Programme</a>
+        <a href="/grand-rail/rail-franchising.html">Rail Franchising and Partnerships</a>
+        <a href="/wmr-investment-strategy/wmr-investment-strategy.html">West Midlands Rail Investment Strategy</a>
+        <a href="/grand-rail/grand-rail.html">Grand Rail Collaboration</a>
+      </div>
+      <div>
+        <a href="/wm-station-alliance/wm-station-alliance.html">West Midlands Stations Alliance</a>
+        <a href="#">Friends of Kings Norton Station</a>
+        <a href="#">Community Partnerships</a>
+      </div>
+      <span></span>
+    </div> 
+    <a href="news" onclick="navigate(event,this)">News</a>
+    <a href="contact" onclick="navigate(event,this)">Contact us</a>
+    <button></button>
+  </div>
+  <div class="menu" onclick="document.body.style.overflowY = 'hidden';this.nextElementSibling.style.display='block'">&#9776;</div>
+  <div class="menu-screen">
+    <div class="menu-close" onclick="document.body.style.overflowY = 'auto';this.parentElement.style.display='none'">&Cross;</div>
+    <a href="about" onclick="navigate(event,this)">About WMRE</a>
+    <a href="projects" onclick="navigate(event,this)">Projects</a>
+    <a href="whatwedo" onclick="navigate(event,this)">What we do</a>
+    <a href="news" onclick="navigate(event,this)">News</a>
+    <a href="contact" onclick="navigate(event,this)">Contact us</a>    
+  </div>
+</nav> 

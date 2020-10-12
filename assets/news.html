@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>News - West Midlands Rail Executive</title>
+      <meta name="description" content="">
+      <meta name="author" content="">
+  </head>
+  <body>
+    <style>
+      body{margin:0;font-family: "Open Sans",sans-serif;height:100vh;color:#54565b;-webkit-font-smoothing:antialiased;font-size:16px;min-width:320px}
+      h1{font-size:48px}
+      h2{font-size: 25px;}
+      h3{font-size: 18px;}
+      input{font:inherit;margin:0;border: 0;padding: 0;outline: 0;}
+      select{font:inherit;padding: 0 10px;border:0;outline: 0;}
+      a{text-decoration: none;color: inherit;}
+      
+      main{margin: 60px auto 0;padding: 0 20px 20px;min-height:800px;text-align: left;max-width: 1280px;overflow: auto;}
+      main > h2{text-align: left;}
+      main > h3{text-align: left;}
+
+      article{max-width: 800px;}
+      article a{border-bottom: 1px solid #3CBFAE;}
+      .top-img{width:100%}
+      section.right > span:first-of-type{display: none;}
+      
+      @media(min-width: 760px){
+        article{max-width: 60%; display: inline-block;}
+        section.right{min-width: 260px;vertical-align: top;float: right;}
+        section.right > span:first-of-type{margin: 0;display: block}
+        section.right > span:nth-of-type(2){display: none;}
+      }
+
+      section.bottom{margin: 50px 0;}
+
+      .card{border-top: 1px solid black;margin-top: 20px;max-width: 380px;}
+      .card h3{}
+      .card p{margin: 20px 0;font-size: 15px;color: #3dbfae;}
+      .card span{border-radius: 10px;border: 1px solid #3dbfae;padding: 3px 10px;margin-right: 5px;cursor: pointer;}
+
+      .m-query{box-shadow: 0 0 6px 0 #d3d3d3;margin-top: 50px;padding: 20px;width:220px;display:block;}
+      .m-query img{width:59px;height: 52px;}
+      .m-query strong:first-of-type{margin-top: 5px;display: inline-block;}
+      .m-query a{border-bottom: 1px solid #3dbfae;}
+
+      .filter{display: block;overflow: auto;background: #d2cece;width: 280px;}
+      .filter input{display: block;padding: 5px;border: 1px solid gray;font-size: 13px;margin: 10px auto;width: 240px;height: 25px;}
+      .filter select{width: 124px;font-size: 13px;height: 37px;border: 1px solid gray;padding: 5px;margin-bottom: 10px;}
+      .filter select:first-of-type{margin-left: 14px;}
+
+      .more{border: 1px solid #3dbfae;padding: 3px 10px;border-radius: 10px;margin-top: 40px;text-align: center;width: 100px;}
+    </style>
+    <main>
+      <h2>News</h2>
+      <h3>Top stories</h3>
+      <article>
+        <img class="top-img" src="media/news.png"/>
+        <h3>West Midlands Rail Investment Strategy</h3>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+          has been the industry's standard dummy text ever since the 1500s, when an unknown
+          printer took a galley of type and scrambled it to make a type specimen book. It has
+          survived not only five centuries.
+        </p>
+        <a>Read more</a>
+      </article>
+      <section class="right">
+        <span class="m-query">
+          <img src="media/meet-wmre-team-logo.png" alt="think logo">
+          <h3>Media queries</h3>
+          <p>
+            The press and media enquiries line is for accredited journalists only. Please call or
+            email our media contacts listed below.<br>
+            <strong>0121 214 7073</strong><br>
+            <strong>07887 794 241</strong>
+          </p>
+          <a>Submit your query</a>
+        </span>   
+        <div class="card">
+          <h3>West Midlands Rail Investment Strategy</h3>
+          <p>Thursday 29 September 2020</p>
+          <span>Category</span><span>Category</span>
+        </div>
+        <div class="card">
+          <h3>West Midlands Rail Investment Strategy</h3>
+          <p>Thursday 29 September 2020</p>
+          <span>Category</span><span>Category</span>
+        </div>
+        <span class="m-query">
+          <img src="media/meet-wmre-team-logo.png" alt="think logo">
+          <h3>Media queries</h3>
+          <p>
+            The press and media enquiries line is for accredited journalists only. Please call or
+            email our media contacts listed below.<br>
+            <strong>0121 214 7073</strong><br>
+            <strong>07887 794 241</strong>
+          </p>
+          <a>Submit your query</a>
+        </span>        
+      </section>
+      <section class="bottom">
+        <h2>All stories</h2>
+        <div class="filter">
+          <input placeholder="Search news"/>
+          <select>
+            <option value="0" selected="" disabled="">Categories</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>          
+          </select>
+          <select>
+            <option value="0" selected="" disabled="">Sort by</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>          
+          </select>
+        </div>
+        <div class="card">
+          <h3>West Midlands Rail Investment Strategy</h3>
+          <p>Thursday 29 September 2020</p>
+          <span>Category</span><span>Category</span>
+        </div>
+        <div class="card">
+          <h3>West Midlands Rail Investment Strategy</h3>
+          <p>Thursday 29 September 2020</p>
+          <span>Category</span><span>Category</span>
+        </div>
+        <div class="card">
+          <h3>West Midlands Rail Investment Strategy</h3>
+          <p>Thursday 29 September 2020</p>
+          <span>Category</span><span>Category</span>
+        </div>
+        <div class="more">Load more</div>
+      </section>
+    </main>
+    <script src="scripts.js" show></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contact - West Midlands Rail Executive</title>
+      <meta name="description" content="">
+      <meta name="author" content="">
+  </head>
+  <body>
+    <style>
+      body{margin:0;font-family: "Open Sans",sans-serif;height:100vh;color:#54565b;-webkit-font-smoothing:antialiased;font-size:16px;min-width:320px}
+      h1{font-size:48px}
+      h2{font-size: 25px;}
+      h3{font-size: 18px;}
+      input{font:inherit;margin:0;border: 0;padding: 0;outline: 0;}
+      select{font:inherit;padding: 0 10px;border:0;outline: 0;}
+      a{text-decoration: none;color: inherit;}
+
+      main{margin: 60px auto 0;padding: 0 20px 20px;min-height:800px;text-align: center; background: url("media/contact-form-bg.png") no-repeat center/cover;overflow: auto;}
+      main h2{color: white;text-align: left;max-width: 1280px;margin: 20px auto 80px;}
+      form{background: white;padding: 10px;width:calc(100% - 20px);display: inline-block;text-align: left;min-height: 729px;max-width: 400px;}
+      form label{display: block;margin:15px 0 5px;text-align: left;}
+      form select{border: 1px solid gray;width: calc(100% - 18px);padding: 5px;max-width: 320px;}
+      form input{border: 1px solid gray;width:calc(100% - 32px);padding: 5px;max-width: 308px;}
+      #postcode{width: 110px;}
+      form button{    display: block;margin: 10px auto;padding: 10px 20px;border-radius: 25px;border: 2px solid #3cbfae;cursor: pointer;}
+
+      section{background: white;overflow: auto;max-width: 320px;vertical-align: top;text-align: left;display: inline-block;}
+      .info{    background: #696969 url(media/wmr-investment-bg.png) center/contain;color: white;padding: 20px;}
+      .info h3{margin:5px 0}
+
+      .m-query{box-shadow: 0 0 6px 0 #d3d3d3;margin: 50px auto;padding: 20px;width:220px;display:block;}
+      .m-query img{width:59px;height: 52px;}
+      .m-query strong:first-of-type{margin-top: 5px;display: inline-block;}
+      .m-query a{border-bottom: 1px solid #3dbfae;}
+
+      @media(min-width: 667px){
+        form{width:45%}
+        section{position: relative;left: -5px;}
+        .m-query{margin:0 auto;padding: 18px;width:88%}
+      }      
+    </style>
+    <main>
+      <h2>Contact us</h2>
+      <form>
+        <h3>Send us a message</h3>
+        <label for="team">Select the team</label>
+        <select id="team">
+          <option value="0">HR</option>
+        </select><br>
+        <label for="name">Full name</label>
+        <input id="name"/><br>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email"><br>
+        <label for="phonenumber">Phone number</label>
+        <input type="text" name="phonenumber" id="phonenumber"><br>
+        <label for="company-name">Company name</label>
+        <input type="text" name="company-name" id="company-name"><br>
+        <label for="postcode">Post code</label>
+        <input type="text" name="postcode" id="postcode"><br>
+        <label for="msg">Message</label>
+        <textarea name="msg" id="msg" cols="40" rows="10"></textarea><br>
+        <button>Submit</button>
+      </form>
+      <section>
+        <div class="info">
+          <img src="media/what-you-think-logo.png" alt="team logo" width="63" height="56">
+          <h3>Phone</h3>
+          <p>0121 214 7423</p>
+          <p>Monday - Friday 0800-1800 and on Saturdays 0900 - 1300 (excluding bank holidays).</p>
+          <img src="media/map-pin.png" alt="team logo" width="35" height="50">
+          <h3>Head Office Address</h3>
+          <p>16 Summer Ln, Birmingham B19 3SD</p>
+          <h3>Follow us</h3>
+          <a href="#"><img src="media/twitter-green-logo.png" alt="twitter" id="twitter-logo" width="52" height="47"></a>
+          <a href="#"><img src="media/linkedin-green-logo.png" alt="linkedin" width="52" height="47"></a>
+        </div>
+        <div class="m-query">
+          <img src="media/meet-wmre-team-logo.png" alt="think logo">
+          <h3>Media queries</h3>
+          <p>
+            The press and media enquiries line is for accredited journalists only. Please call or
+            email our media contacts listed below.<br>
+            <strong>0121 214 7073</strong><br>
+            <strong>07887 794 241</strong>
+          </p>
+          <a>Submit your query</a>
+        </div>
+      </section>
+    </main>
+    <script src="scripts.js"></script>   
+  </body>
+</html>
