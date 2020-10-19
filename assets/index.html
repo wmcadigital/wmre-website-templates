@@ -6,29 +6,21 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="favicon.png" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="wmre.css"/>
   </head>
   <body>
     <style>
-      body{margin:0;font-family: "Open Sans",sans-serif;min-width: 320px;}
-      h3{font-size: 23px;}
-      input{font:inherit;margin:0;border: 0;padding: 0;outline: 0;}
-      select{font:inherit;padding: 0 10px;border:0;outline: 0;}
-      a{text-decoration: none;color: inherit;}
-             
-      main{margin: 0 auto 0;min-height:800px;text-align: center;}
-      
-      .hero{background: url(hero-background.png) -1586px -736px no-repeat;text-align: center;overflow: auto;}     
-      header{color: white;font-size:48px;max-width: 867px;margin:200px auto 50px;font-weight: bold;letter-spacing: .2px;}
-      header span{color:#3cbfae}
-      header + p{width: 347px;margin: 0 auto;color:white;letter-spacing: .2px;}
+      .hero{background: url(hero-background.png) -1586px -736px no-repeat;text-align: center;overflow: auto;max-width: 1440px;margin: auto;}     
+      h1{color: white;font-size:48px;max-width: 867px;margin:200px auto 50px;font-weight: bold;letter-spacing: .2px;}
+      h1 span{color:#3cbfae}
+      h1 + p{width: 347px;margin: 0 auto;color:white;letter-spacing: .2px;}
       .down-arrow{margin-top: 50px;}
       
       .card-container{max-width: 1280px;margin:50px auto;}
       .hero .card{background-color: #fff;width: 235px;height: 425px;margin:3px;display: inline-block;padding: 20px;vertical-align: top;box-shadow: 0 0 6px 0 #d3d3d3;}
-      .hero .card :first-child{text-align: right;margin:0 0 25px;}
+      .hero .card :first-child{text-align: right;margin:10px 0 30px;}
       .hero .card p{line-height: 1.4em;margin: 0 0 25px;}
-      .hero .card h4{width: 235px;font-size: 18px; color:#54565b;margin: 0 0 25px;}
+      .hero .card h2{width: 235px;font-size: 18px; color:#54565b;margin: 0 0 25px;}
       .hero .card a {color: #000;text-decoration: none;border-bottom: 2px solid #3cbfae;margin-bottom:15px;display: inline-block}
       .hero .card img{width: inherit;}
       .learn{display: none;}
@@ -39,8 +31,8 @@
 
       @media (max-width: 600px) {
         .hero{background: url(mobile-hero-bg.png) no-repeat center/cover;height: 555px;}
-        header{font-size: 25px;max-width: calc(100% - 60px);}  
-        header + p {display: none;}
+        h1{font-size: 25px;max-width: calc(100% - 60px);}  
+        h1 + p {display: none;}
         .down-arrow{margin-top: 0px;}
 
         .card-container{display: none;}
@@ -48,45 +40,32 @@
       }
 
       .news{text-align:center;max-width: 1085px;margin: auto;}
-      .news h3{font-size:23px}
       .dots{display:block;margin-bottom: 25px;}
       .dots span{width: 18px;height: 18px;margin: 0 3px;border-radius: 100%;display: inline-block;background-color: #d3d3d3;cursor: pointer;}
       .dots .selected{background:#3cbfae}
-
-
-      .slider-wrapper{margin-top: 20px;padding-top: 40px;}
       .arrows{width: 35px;display: inline-grid;height: 365px;place-items: center;cursor: pointer;}
       .arrows img{width:16px}
-      .news .card{width: 240px; height: 350px;box-shadow: 0 0 6px 0 #d3d3d3;display: inline-block;margin: 0 5px;overflow:hidden;position: relative;}
+      .news .card{width: 240px; height: 350px;box-shadow: 0 0 6px 0 #d3d3d3;display: inline-block;margin: 0 5px;overflow:hidden;position: relative;display: none;}
+      .news .visible{display: inline-block}
       .news .card img{width: inherit;}
       .news .card div{background: url(news-triangle.png) no-repeat -8px 5%/107%;height: 185px;position: absolute;bottom: 0;width: 100%;}
-      .news .card h4{font-size: 18px;color: #54565b;margin: 70px auto 0;width: 210px;text-align: left;}
-      .news a:nth-of-type(n+2){display: none;}
+      .news .card h2{font-size: 18px;color: #54565b;margin: 70px auto 0;width: 210px;text-align: left;}
       .news > .more{display:inline-block !important;margin-top: 20px;padding-bottom: 3px;border-bottom: 1px solid #3cbfae;}
-      
-      @media (min-width: 575px) {
-        .news a:nth-of-type(2){display: inline-block;}
-      }
-      @media (min-width: 829px) {
-        .news a:nth-of-type(3){display: inline-block;}
-      }
-      @media (min-width: 1084px) {
-        .news a:nth-of-type(4){display: inline-block;}
-      }         
+             
 
       .projects{background-color: #343332;padding: 30px 0;text-align: center;color: white;margin-top:50px}
       .projects select{ width: 270px;height: 40px;display: inline-block;margin-bottom: 5px;}
       .projects input{color: black;width:260px;height:40px;margin-bottom: 5px;padding-left: 10px;}
       .projects input::placeholder{color: black;}
-      .projects .switch-field{border:1px solid white; display: inline-block;overflow: hidden;vertical-align: top;}
+      .projects .switch-field{border:1px solid white; display: inline-block;overflow: hidden;vertical-align: top;line-height: 18px;}
       .projects .switch-field div{display:inline-block;width: 100px;padding: 10px 16px;}
       .projects .selected{    background: white;color: #353332;}
       .projects .cat{vertical-align: middle;}
       .projects-list{min-height:237px;background: #272626;margin-top: 30px;padding: 10px 0;}
-      .proj{display: inline-block;width: 270px;background: white;text-align: left;margin-bottom: 5px;}
+      .proj{display: inline-block;width: 270px;background: white;text-align: left;margin-bottom: 5px;padding-bottom: 10px;}
       .proj:last-child{margin-bottom: 0;}
       .proj img{width:260px;margin: 5px;}
-      .proj h4{ color: black;margin: 3px 5px;}
+      .proj h2{ color: black;margin: 3px 5px;font-size: 20px;}
       .proj span{color: black;display: inline-block;margin: 5px;}
       .proj span:first-of-type{border-right: 2px solid #3cbfae;padding-right: 5px;margin-right: 0;}
 
@@ -101,134 +80,266 @@
       .follow-us button:last-child{background: #0274B3;}
       .follow-us .twitter{height: 400px;    margin-top: 20px;background: #dedede;}
     </style>       
-    <main>
-      <section class="hero">
-        <header>Driving a <span>revolution</span> in rail services for West Midlands</header>
-        <p>See strategies and programmes below to find out how we are delivering vision for the region</p>
-        <img class="down-arrow" src="hero-arrow.png" alt="arrow"/>
-        <div class="card-container">
-          <div class="card">
-            <p>Strategy</p>
-            <h4>West Midlands Rail Investment Strategy</h4>
-            <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <a href="#">Read more</a>
-            <img src="card-1-image.svg" alt="investment strategy">
-          </div>
-          <div class="card">
-            <p>Programme</p>
-            <h4>West Midlands Rail Programme</h4>
-            <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <a href="#">Read more</a>
-            <img src="card-2-rail.png" alt="rail programme">
-          </div>
-          <br>
-          <div class="card">
-            <p>Programme</p>
-            <h4>West Midlands Rail Investment Strategy</h4>
-            <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <a href="#">Read more</a>
-            <img src="card-3-station.png" alt="station">
-          </div>
-          <div class="card">
-            <p>Programme</p>
-            <h4>West Midlands Rail Investment Strategy</h4>
-            <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <a href="#">Read more</a>
-            <img src="card-4-grand.png" alt="grand rail">
-          </div>
+  
+    <section class="hero">
+      <h1>Driving a <span>revolution</span> in rail services for West Midlands</h1>
+      <p>See strategies and programmes below to find out how we are delivering vision for the region</p>
+      <img class="down-arrow" src="hero-arrow.png" alt="arrow"/>
+      <div class="card-container">
+        <div class="card">
+          <p>Strategy</p>
+          <h2>West Midlands Rail Investment Strategy</h2>
+          <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#">Read more</a>
+          <img src="card-1-image.svg" alt="investment strategy">
         </div>
-        <div class="learn">Learn how</div>
-      </section>
-      <section class="news">
-        <h3>News</h3>
-        <div class="dots">
-          <span class="selected"></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="card">
+          <p>Programme</p>
+          <h2>West Midlands Rail Programme</h2>
+          <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#">Read more</a>
+          <img src="card-2-rail.png" alt="rail programme">
         </div>
-        <div class="arrows" style="float:left">
-          <img src="arrow-left.png"/>
+        <br>
+        <div class="card">
+          <p>Programme</p>
+          <h2>West Midlands Rail Investment Strategy</h2>
+          <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#">Read more</a>
+          <img src="card-3-station.png" alt="station">
         </div>
-        <a class="card" href="article">
-          <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
-          <div>
-            <h4>All change at the top for the West Midlands Rail Executive</h4>
-          </div>
+        <div class="card">
+          <p>Programme</p>
+          <h2>West Midlands Rail Investment Strategy</h2>
+          <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <a href="#">Read more</a>
+          <img src="card-4-grand.png" alt="grand rail">
+        </div>
+      </div>
+      <div class="learn">Learn how</div>
+    </section>
+    <section class="news">
+      <h2>News</h2>
+      <div class="dots" index="0">
+        <span class="selected" onclick="dotClick(this)"></span>
+        <span onclick="dotClick(this)"></span>
+        <span onclick="dotClick(this)"></span>
+        <span onclick="dotClick(this)"></span>
+        <span onclick="dotClick(this)"></span>
+      </div>
+      <div class="arrows" style="float:left" onclick="arrowClick(this,-1)">
+        <img src="arrow-left.png" alt="right arrow"/>
+      </div>
+      <a class="card visible" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>1 All change at the top for the West Midlands Rail Executive</h2>
+        </div>
+      </a>
+      <a class="card visible" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>2 House of Lords report on HS2 ignores benefits for the Midlands</h2>
+        </div>
+      </a>
+      <a class="card visible" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>3 Lock-making heritage is key to Black Country railway station designs</h2>
+        </div>
+      </a>
+      <a class="card visible" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>4 Plans submitted for third entrance at Snow Hill Railway Station</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>5 All change at the top for the West Midlands Rail Executive</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>6 House of Lords report on HS2 ignores benefits for the Midlands</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>7 Lock-making heritage is key to Black Country railway station designs</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>8 Plans submitted for third entrance at Snow Hill Railway Station</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>9 All change at the top for the West Midlands Rail Executive</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>10 House of Lords report on HS2 ignores benefits for the Midlands</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>11 Lock-making heritage is key to Black Country railway station designs</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>12 Plans submitted for third entrance at Snow Hill Railway Station</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>13 All change at the top for the West Midlands Rail Executive</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>14 House of Lords report on HS2 ignores benefits for the Midlands</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>15 Lock-making heritage is key to Black Country railway station designs</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>16 Plans submitted for third entrance at Snow Hill Railway Station</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>17 All change at the top for the West Midlands Rail Executive</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>18 House of Lords report on HS2 ignores benefits for the Midlands</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>19 Lock-making heritage is key to Black Country railway station designs</h2>
+        </div>
+      </a>
+      <a class="card" href="article">
+        <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
+        <div>
+          <h2>20 Plans submitted for third entrance at Snow Hill Railway Station</h2>
+        </div>
+      </a>
+      <div class="arrows" style="float:right" onclick="arrowClick(this,1)">
+        <img src="arrow-right.png" alt="left arrow"/>
+      </div>
+      <br>          
+      <a class="more" href="news">Read all news</a>
+    </section>
+    <section class="projects">
+      <h2>Projects in your area</h2>
+      <p>See what is happening in your area, latest project updates</p>
+      <select aria-label="Select area">
+        <option value="0" selected="" disabled="">Select your area</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <input placeholder="Enter postcode" aria-label="Enter postcode"><br>
+      <select class="cat" aria-label="Select category">
+        <option value="0" selected="" disabled="">Category</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <div class="switch-field" aria-label="Select project state">
+        <div class="selected">In progress</div>
+        <div>Completed</div>
+      </div>
+      <div class="projects-list">
+        <a class="proj" href="/project">
+          <img src="rail-yellow.png" alt="rail-programme">
+          <h2>Project title</h2>
+          <span>WolverHampton</span><span>In progress</span>
         </a>
-        <a class="card" href="article">
-          <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
-          <div>
-            <h4>House of Lords report on HS2 ignores benefits for the Midlands</h4>
-          </div>
+        <a class="proj" href="/project">
+          <img src="rail-yellow.png" alt="rail-programme">
+          <h2>Project title</h2>
+          <span>WolverHampton</span><span>In progress</span>
         </a>
-        <a class="card" href="article">
-          <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
-          <div>
-            <h4>Lock-making heritage is key to Black Country railway station designs</h4>
-          </div>
-        </a>
-        <a class="card" href="article">
-          <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
-          <div>
-            <h4>Plans submitted for third entrance at Snow Hill Railway Station</h4>
-          </div>
-        </a>        
-        <div class="arrows" style="float:right">
-          <img src="arrow-right.png"/>
-        </div>
-        <br>          
-        <a class="more" href="news">Read all news</a>
-      </section>
-      <section class="projects">
-        <h3>Projects in your area</h3>
-        <p>See what is happening in your area, latest project updates</p>
-        <select>
-          <option value="0" selected="" disabled="">Select your area</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-        <input placeholder="Enter postcode"><br>
-        <select class="cat">
-          <option value="0" selected="" disabled="">Category</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-        <div class="switch-field">
-          <div class="selected">In progress</div>
-          <div>Completed</div>
-        </div>
-        <div class="projects-list">
-          <a class="proj" href="/project">
-            <img src="rail-yellow.png" alt="rail-programme">
-            <h4>Project title</h4>
-            <span>WolverHampton</span><span>In progress</span>
-          </a>
-          <a class="proj" href="/project">
-            <img src="rail-yellow.png" alt="rail-programme">
-            <h4>Project title</h4>
-            <span>WolverHampton</span><span>In progress</span>
-          </a>
-          <a class="proj" href="/project">
-            <img src="rail-yellow.png" alt="rail-programme">
-            <h4>Project title</h4>
-            <span>WolverHampton</span><span>In progress</span>
-          </a>                    
-        </div>
-      </section>
-      <section class="follow-us" style="display: none;">
-        <h3>Follow us</h3>
-        <p>To keep up with the latest from us, updates and announcements.</p>
-        <button>Follow WMRE</button>
-        <button>Follow WMRE</button>
-        <div class="twitter"></div>
-      </section>
-    </main>
+        <a class="proj" href="/project">
+          <img src="rail-yellow.png" alt="rail-programme">
+          <h2>Project title</h2>
+          <span>WolverHampton</span><span>In progress</span>
+        </a>                    
+      </div>
+    </section>
+    <section class="follow-us" style="display: none;">
+      <h2>Follow us</h2>
+      <p>To keep up with the latest from us, updates and announcements.</p>
+      <button>Follow WMRE</button>
+      <button>Follow WMRE</button>
+      <div class="twitter"></div>
+    </section>
+    
     <script src="scripts.js" trans></script>
+    <script>
+      l = console.log;
+      function $(sel){return document.querySelectorAll(sel);}
+
+      function dotClick(e){
+        $('.dots > span').forEach(e=>e.className = '');
+        e.className = 'selected';
+        $('.dots')[0].setAttribute('index',[...$('.dots > span')].indexOf(e));
+        newsCards();
+      }
+
+      function arrowClick(e,dir){
+        let curr = $('.dots > .selected')[0];
+        curr.className = '';
+
+        let next = curr[`${dir == 1?'next':'previous'}ElementSibling`];
+        next = next||$(`.dots > :${dir == 1?'first':'last'}-child`)[0];
+        next.className = 'selected';
+
+        $('.dots')[0].setAttribute('index',[...$('.dots > span')].indexOf(next));
+        newsCards();
+      }
+
+      function moreNews(e){
+
+      }
+
+      function newsCards(){
+        let max = Math.floor(($('.news')[0].clientWidth - (35*2))/250);
+        let i = parseInt($('.dots')[0].getAttribute('index'));
+
+        $('.news .visible').forEach(e => e.classList.remove('visible'));
+        let e = $('.news .card')[i*max];
+        e.classList.add('visible');
+        
+        for(i = 0;e && i < max;i++,e = e.nextElementSibling)e.classList.add('visible');
+      }
+    </script>
   </body>
 </html>

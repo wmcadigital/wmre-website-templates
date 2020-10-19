@@ -4,8 +4,8 @@
   .logo{display: inline-block; width: 162px;height:50px;background: url(media/wmre-nav-logo.png) no-repeat center/cover;position: relative;z-index: 1;left: 5px;}
   .links{float:right;font-size: 16px;}
   .links a{color: white;text-decoration: none;margin:8px 16px;display: inline-block;position: relative;}
-  .links a[href="whatwedo"]{padding: 8px 16px;margin: 0;}
-  .links a[href="whatwedo"]:hover + div{display: block;}
+  .links a[show]{padding: 8px 16px;margin: 0;cursor: pointer;}
+  .links a[show]:hover + div{display: block;}
   .links > :last-child{background: url(media/search.png) no-repeat center/cover;height: 18px;border: 0;cursor: pointer;width: 16px;margin: 8px 16px;position: relative;top:3px}
 
   .whatwedo{display: none;position: absolute;background: white;left:0;width:100%;text-align: center;top:47px;z-index: 1;}
@@ -32,11 +32,11 @@
     
 </style>
 <nav>
-  <a class="logo" href="/"></a>
+  <a class="logo" href="/" aria-label="West Midlands Rail Executive Homepage"></a>
   <div class="links">
-    <a href="about" onclick="navigate(event,this)">About WMRE</a>
-    <a href="projects" onclick="navigate(event,this)">Projects</a>
-    <a href="whatwedo" onclick="navigate(event,this)">What we do</a>
+    <a href="about">About WMRE</a>
+    <a href="projects">Projects</a>
+    <a show>What we do</a>
     <div class="whatwedo">
       <div>
         <h4>What we do</h4>
@@ -61,7 +61,7 @@
     </div> 
     <a href="news" onclick="navigate(event,this)">News</a>
     <a href="contact" onclick="navigate(event,this)">Contact us</a>
-    <button></button>
+    <button aria-label="search"></button>
   </div>
   <div class="menu" onclick="document.body.style.overflowY = 'hidden';this.nextElementSibling.style.display='block'">&#9776;</div>
   <div class="menu-screen">
