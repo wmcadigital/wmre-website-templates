@@ -27,6 +27,7 @@ const server = require('http').createServer(async (req, res)=>{
       case 'png': t = 'image/png';break;
       case 'jpg': t = 'image/jpeg';break;
       case 'svg': t = 'image/svg+xml';break;
+      case 'css': t = 'text/css';
     }
 
     try{
