@@ -14,6 +14,7 @@
       h1{color: white;font-size:48px;max-width: 867px;margin:200px auto 50px;font-weight: bold;letter-spacing: .2px;}
       h1 span{color:#3cbfae}
       h1 + p{width: 347px;margin: 0 auto;color:white;letter-spacing: .2px;}
+      main{padding: 0;margin: 0;}
       .down-arrow{margin-top: 50px;}
       
       .card-container{max-width: 1280px;margin:50px auto;}
@@ -69,7 +70,7 @@
       .follow-us button:last-child{background: #0274B3;}
       .follow-us .twitter{height: 400px;    margin-top: 20px;background: #dedede;}
     </style>       
-  
+    <main>
     <section class="hero">
       <h1>Driving a <span>revolution</span> in rail services for West Midlands</h1>
       <p>See strategies and programmes below to find out how we are delivering vision for the region</p>
@@ -119,25 +120,25 @@
       <div class="arrows" style="float:left" onclick="arrowClick(this,-1)">
         <img src="arrow-left.png" alt="right arrow"/>
       </div>
-      <a class="card visible" href="article">
+      <a class="card" href="article">
         <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
         <div>
           <h2>1 All change at the top for the West Midlands Rail Executive</h2>
         </div>
       </a>
-      <a class="card visible" href="article">
+      <a class="card" href="article">
         <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
         <div>
           <h2>2 House of Lords report on HS2 ignores benefits for the Midlands</h2>
         </div>
       </a>
-      <a class="card visible" href="article">
+      <a class="card" href="article">
         <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
         <div>
           <h2>3 Lock-making heritage is key to Black Country railway station designs</h2>
         </div>
       </a>
-      <a class="card visible" href="article">
+      <a class="card" href="article">
         <img class="rail-programme" src="news-card-train.png" alt="rail-programme">
         <div>
           <h2>4 Plans submitted for third entrance at Snow Hill Railway Station</h2>
@@ -290,7 +291,7 @@
       <button>Follow WMRE</button>
       <div class="twitter"></div>
     </section>
-    
+    </main>
     <script src="scripts.js" trans></script>
     <script>
       l = console.log;
@@ -315,12 +316,8 @@
         newsCards();
       }
 
-      function moreNews(e){
-
-      }
-
       function newsCards(){
-        let max = Math.floor(($('.news')[0].clientWidth - (35*2))/250);
+        let max = Math.floor(($('.news')[0].clientWidth - (35*2))/253);
         let i = parseInt($('.dots')[0].getAttribute('index'));
 
         $('.news .visible').forEach(e => e.classList.remove('visible'));
@@ -329,6 +326,19 @@
         
         for(i = 0;e && i < max;i++,e = e.nextElementSibling)e.classList.add('visible');
       }
+
+      window.onresize = function(){
+        newsCards();
+        
+      }
+
+
+
+      function moreNews(e){
+
+      }
+      //******
+      newsCards();
     </script>
   </body>
 </html>

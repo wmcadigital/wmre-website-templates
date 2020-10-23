@@ -7,6 +7,7 @@
       <title>News - West Midlands Rail Executive</title>
       <meta name="description" content="">
       <meta name="author" content="">
+      <link rel="icon" href="favicon.png" />
       <link rel="stylesheet" href="wmre.css"/>
   </head>
   <body>
@@ -45,7 +46,7 @@
       <h1>News</h1>
       <h2>Top stories</h2>
       <article>
-        <img class="top-img" src="media/news.png"/>
+        <img class="top-img" src="media/news.png" alt="woman entering train"/>
         <h3>West Midlands Rail Investment Strategy</h3>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
@@ -92,14 +93,14 @@
       <section class="bottom">
         <h2>All stories</h2>
         <div class="filter">
-          <input placeholder="Search news"/>
-          <select>
+          <input placeholder="Search news" aria-label="search news"/>
+          <select aria-label="Select news category">
             <option value="0" selected="" disabled="">Categories</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>          
           </select>
-          <select>
+          <select aria-label="sort new articles">
             <option value="0" selected="" disabled="">Sort by</option>
             <option value="1">1</option>
             <option value="2">2</option>
