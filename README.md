@@ -3,4 +3,4 @@ Web templates for West Midlands Rail Executive
 
 node server.js
 
-go to http://localhost:8080/
+go to http://localhost:8000/
