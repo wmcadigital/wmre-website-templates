@@ -10,12 +10,14 @@
   </head>
   <body>
     <style>
-      .hero{background: url(hero-background.png) -1586px -736px no-repeat;text-align: center;overflow: auto;max-width: 1440px;margin: auto;}     
+      .mask{clip-path: polygon(0% 79%, 13% 90%, 17% 94%, 21% 97%, 24% 99%, 28% 99%, 31% 98%, 33% 97%, 37% 95%, 45% 91%, 100% 55%, 100% 0%, 0% 0%);}
+      .hero{background:linear-gradient(rgba(0, 0, 0, 0.50),rgba(0, 0, 0, 0.50)), url(hero.jpg) -1586px -736px no-repeat;text-align: center;overflow: auto;margin: auto;} 
+
       h1{color: white;font-size:48px;max-width: 867px;margin:200px auto 50px;font-weight: bold;letter-spacing: .2px;}
       h1 span{color:#3cbfae}
       h1 + p{width: 347px;margin: 0 auto;color:white;letter-spacing: .2px;}
       main{padding: 0;margin: 0 auto;}
-      .down-arrow{margin-top: 50px;}
+      .down-arrow{margin:50px auto 0 auto}
       
       .card-container{max-width: 1280px;margin:50px auto;}
       .hero .card{background-color: #fff;width: 235px;height: 425px;margin:3px;display: inline-block;padding: 20px;vertical-align: top;box-shadow: 0 0 6px 0 #d3d3d3;}
@@ -69,45 +71,49 @@
       .follow-us button{border: none;background-color: transparent;    width: 196px;height: 40px;cursor: pointer;font-size: 16px;background:#1B92E2;color:white}
       .follow-us button:last-child{background: #0274B3;}
       .follow-us .twitter{height: 400px;    margin-top: 20px;background: #dedede;}
+
+   
     </style>       
     <main>
-    <section class="hero">
-      <h1>Driving a <span>revolution</span> in rail services for West Midlands</h1>
-      <p>See strategies and programmes below to find out how we are delivering vision for the region</p>
-      <img class="down-arrow" src="hero-arrow.png" alt="arrow"/>
-      <div class="card-container">
-        <div class="card">
-          <p>Strategy</p>
-          <h2>West Midlands Rail Investment Strategy</h2>
-          <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-          <a href="#">Read more</a>
-          <img src="card-1-image.svg" alt="investment strategy">
+      <div class="shape-container">
+        <div class="shape-left"></div>
+        <div class="hero-copy">
+        <h1>Driving a <span>revolution</span> in rail services for West Midlands</h1>
+        <p>See strategies and programmes below to find out how we are delivering vision for the region</p>
+        <img class="down-arrow" src="hero-arrow.png" alt="arrow">
         </div>
-        <div class="card">
-          <p>Programme</p>
-          <h2>West Midlands Rail Programme</h2>
-          <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-          <a href="#">Read more</a>
-          <img src="card-2-rail.png" alt="rail programme">
-        </div>
-        <br>
-        <div class="card">
-          <p>Programme</p>
-          <h2>West Midlands Rail Investment Strategy</h2>
-          <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-          <a href="#">Read more</a>
-          <img src="card-3-station.png" alt="station">
-        </div>
-        <div class="card">
-          <p>Programme</p>
-          <h2>West Midlands Rail Investment Strategy</h2>
-          <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-          <a href="#">Read more</a>
-          <img src="card-4-grand.png" alt="grand rail">
+        <div class="card-container">
+          <div class="card">
+            <p>Strategy</p>
+            <h2>West Midlands Rail Investment Strategy</h2>
+            <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="#">Read more</a>
+            <img src="card-1-image.svg" alt="investment strategy">
+          </div>
+          <div class="card">
+            <p>Programme</p>
+            <h2>West Midlands Rail Programme</h2>
+            <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="#">Read more</a>
+            <img src="card-2-rail.png" alt="rail programme">
+          </div>
+          <br>
+          <div class="card">
+            <p>Programme</p>
+            <h2>West Midlands Rail Investment Strategy</h2>
+            <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="#">Read more</a>
+            <img src="card-3-station.png" alt="station">
+          </div>
+          <div class="card">
+            <p>Programme</p>
+            <h2>West Midlands Rail Investment Strategy</h2>
+            <p>Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a href="#">Read more</a>
+            <img src="card-4-grand.png" alt="grand rail">
+          </div>
         </div>
       </div>
-      <div class="learn">Learn how</div>
-    </section>
     <section class="news">
       <h2>News</h2>
       <div class="dots" index="0">

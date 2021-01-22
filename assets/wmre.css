@@ -2,7 +2,7 @@
 
 html{margin:auto;min-width: 320px;font-family: "Open Sans",sans-serif;scroll-behavior: smooth;overflow-y: auto;-webkit-font-smoothing:antialiased;font-size:16px;text-align: center;color: #54565b;}
 body{margin:0;position: relative;overflow: auto;}
-main{text-align: left;margin: 75px auto 0;padding: 0 20px 20px;min-height:800px;max-width: 1280px;overflow: auto;}
+main{text-align: left;margin: 75px auto 0;padding: 0 20px 20px;min-height:800px;overflow: auto;}
 input{font:inherit;margin:0;border: 0;padding: 0;outline: 0;}
 select{font:inherit;padding: 0 10px;border:0;outline: 0;}
 a{text-decoration: none;color: inherit;}
@@ -25,4 +25,59 @@ h4{font-size: 18px;}
 }
 
 
+.shape-container{
+  position:relative;
+  width: 100%;
+	height: 1100px;
+  background:linear-gradient(rgba(0, 0, 0, 0.50),rgba(0, 0, 0, 0.50)), url(hero.jpg) -1586px -736px no-repeat;
+  margin-top: -200px;
+}
+
+.shape-container h1 {
+  display: block;
+  margin: 200px auto 50px;
+}
+
+.shape-left{
+  position:absolute;
+  left:0;
+  bottom:0;
+  width: 100%;
+	height: 100%;
+	background-image: url('Hero-mask.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+@media (max-width: 1366px) {
+  .shape-left{
+    background-position: bottom;
+    background-size: 2000px 450px;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .shape-left{
+    left: -50px;
+    width: 350px;
+  }
+
+}
+
+.hero-copy {
+  text-align: center;
+  display: grid;
+  margin-top: 90px;
+}
+
+
+.shape-container .card-container{max-width: 1280px;margin:50px auto;display: flex;position: relative;z-index: 999999;}
+.shape-container .card-container .card{background-color: #fff;width: 235px;height: 425px;margin:3px;display: inline-block;padding: 20px;vertical-align: top;box-shadow: 0 0 6px 0 #d3d3d3;}
+.shape-container .card-container .card :first-child{text-align: right;margin:10px 0 30px;}
+.shape-container .hecard-containerro .card p{line-height: 1.4em;margin: 0 0 25px;}
+.shape-container .card-container .card h2{width: 235px;font-size: 18px; color:#54565b;margin: 0 0 25px;}
+.shape-container .card-container .card a {color: #000;text-decoration: none;border-bottom: 2px solid #3cbfae;margin-bottom:15px;display: inline-block}
+.shape-container .card-container .card img{width: inherit;}
 
